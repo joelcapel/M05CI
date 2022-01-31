@@ -99,6 +99,7 @@ public class Matrix {
             for(int j=0; j<height; j++){
                 s += String.format(" [%s]", data[i][j]);
             }
+            s += "\r\n";
         }
 
         return  s;
