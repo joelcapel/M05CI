@@ -42,7 +42,7 @@ public class Matrix {
 
         for(int i=0; i<width; i++){
             for(int j=0; j<height; j++){
-                data[i][j] = r.nextInt(max-min+1) + min;
+                data[i][j] = r.nextInt(Math.abs(max-min+1)) + min;
             }
         }
     }
@@ -59,7 +59,7 @@ public class Matrix {
      * Fills the Matrix with random data.
      */
     public void Fill(){
-        Fill(Integer.MIN_VALUE, Integer.MAX_VALUE);
+        Fill(0, Integer.MAX_VALUE-1);
     }
 
     /**
@@ -99,7 +99,6 @@ public class Matrix {
             for(int j=0; j<height; j++){
                 s += String.format(" [%s]", data[i][j]);
             }
-            s += "\r\n";
         }
 
         return  s;
